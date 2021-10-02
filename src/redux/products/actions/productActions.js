@@ -21,7 +21,7 @@ import {
 export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCTS_FETCH_REQUEST })
-    const { data } = await axios.get('/api/products')
+    const { data } = await axios.get('/api/products/')
 
     dispatch({ type: PRODUCTS_FETCH_SUCCESS, payload: data })
   } catch (error) {
