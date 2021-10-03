@@ -21,7 +21,9 @@ import {
 export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCTS_FETCH_REQUEST })
-    const { data } = await axios.get('/api/products/')
+    const { data } = await axios.get(
+      'https://technology-ecommerce.herokuapp.com/api/products/'
+    )
 
     dispatch({ type: PRODUCTS_FETCH_SUCCESS, payload: data })
   } catch (error) {
@@ -39,7 +41,9 @@ export const getProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-    const { data } = await axios.get(`/api/products/${id}`)
+    const { data } = await axios.get(
+      `https://technology-ecommerce.herokuapp.com/api/products/${id}`
+    )
 
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data })
   } catch (error) {
@@ -66,7 +70,7 @@ export const newProductReview = (id, reviewInfo) => async (dispatch) => {
     }
 
     const { data } = await axios.put(
-      `/api/products/${id}/review`,
+      `https://technology-ecommerce.herokuapp.com/api/products/${id}/review`,
       { name, comment, rating },
       config
     )

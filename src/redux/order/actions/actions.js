@@ -30,7 +30,7 @@ export const createNewOrder = (order) => async (dispatch) => {
     const { data } =
       user === ''
         ? await axios.post(
-            '/api/orders/create',
+            'https://technology-ecommerce.herokuapp.com/api/orders/create',
             {
               orderItems,
               shippingAddress,
@@ -44,7 +44,7 @@ export const createNewOrder = (order) => async (dispatch) => {
             config
           )
         : await axios.post(
-            '/api/orders/create',
+            'https://technology-ecommerce.herokuapp.com/api/orders/create',
             {
               orderItems,
               shippingAddress,

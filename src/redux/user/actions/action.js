@@ -28,7 +28,7 @@ export const register = (name, email, password) => async (dispatch) => {
     const isAdmin = false
 
     const { data } = await axios.post(
-      '/api/users/register',
+      'https://technology-ecommerce.herokuapp.com/api/users/register',
       { name, email, password, isAdmin },
       config
     )
@@ -63,7 +63,7 @@ export const login = (email, password) => async (dispatch) => {
     }
 
     const { data } = await axios.post(
-      '/api/users/login',
+      'https://technology-ecommerce.herokuapp.com/api/users/login',
       { email, password },
       config
     )
@@ -104,7 +104,10 @@ export const getUserProfile = () => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.get('/api/users/profile', config)
+    const { data } = await axios.get(
+      'https://technology-ecommerce.herokuapp.com/api/users/profile',
+      config
+    )
 
     dispatch({ type: GET_USER_PROFILE_SUCCESS, payload: data })
   } catch (error) {
@@ -132,7 +135,7 @@ export const updateUserDefaultShippingAddress =
       }
 
       const { data } = await axios.put(
-        '/api/users/profile/defaultShipping',
+        'https://technology-ecommerce.herokuapp.com/api/users/profile/defaultShipping',
         { street, city, state, country, postalCode },
         config
       )
@@ -162,7 +165,7 @@ export const updateUserAccountDetails =
       }
 
       const { data } = await axios.put(
-        '/api/users/profile/accountDetails',
+        'https://technology-ecommerce.herokuapp.com/api/users/profile/accountDetails',
         { name, email, password },
         config
       )
