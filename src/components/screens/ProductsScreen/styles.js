@@ -2,6 +2,10 @@ import { makeStyles } from '@material-ui/core'
 
 export const useStyles = makeStyles((theme) => ({
   image: {
+    [theme.breakpoints.only('xs')]: {
+      height: 200,
+      width: '100%',
+    },
     [theme.breakpoints.only('sm')]: {
       height: 250,
       width: '100%',
@@ -29,6 +33,10 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('xl')]: {
       maxWidth: 525,
     },
+    [theme.breakpoints.only('xs')]: {
+      margin: '0px 0px',
+      minWidth: '100%',
+    },
   },
   filterItems: {
     cursor: 'pointer',
@@ -46,11 +54,17 @@ export const useStyles = makeStyles((theme) => ({
     border: '.5px solid lightgrey',
   },
   productsContainer: {
+    [theme.breakpoints.only('xs')]: {
+      padding: '10px 5px',
+    },
     padding: '10px',
     height: '100%',
     border: '.5px solid lightgrey',
   },
   productName: {
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '0.9rem',
+    },
     [theme.breakpoints.only('sm')]: {
       fontSize: '20px',
     },
@@ -89,10 +103,16 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('xl')]: {
       fontSize: '2.0rem',
     },
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '1.1rem',
+    },
   },
   brand: {
     [theme.breakpoints.up('xl')]: {
       fontSize: '1.5rem',
+    },
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '0.8rem',
     },
   },
   price: {
@@ -102,15 +122,24 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       fontSize: '1rem',
     },
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '0.8rem',
+    },
   },
   actionIcons: {
     [theme.breakpoints.up('xl')]: {
       fontSize: '2.8rem',
     },
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '1rem',
+    },
   },
   qty: {
     [theme.breakpoints.up('xl')]: {
       fontSize: '2rem',
+    },
+    [theme.breakpoints.only('xs')]: {
+      fontSize: '.8rem',
     },
   },
 }))

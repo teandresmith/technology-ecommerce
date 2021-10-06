@@ -517,13 +517,13 @@ const MobileView = () => {
           filteredProducts &&
           filtered.length === 0 ? (
           products.map((product) => (
-            <Grid item xs={12} sm={4} md={4} key={product._id}>
+            <Grid item xs={6} sm={4} md={4} key={product._id}>
               <Product product={product} customClass={classes} />
             </Grid>
           ))
         ) : (
           filtered.map((product) => (
-            <Grid item xs={12} sm={4} md={4} key={product._id}>
+            <Grid item xs={6} sm={4} md={4} key={product._id}>
               <Product product={product} customClass={classes} />
             </Grid>
           ))
