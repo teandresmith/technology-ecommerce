@@ -1,5 +1,7 @@
 # Technology ECommerce
 
+**Note** This is only a demo project that is being used as practice. **Note**
+
 Technology ECommerce is a fullstack ecommerce mock up built with the MERN Stack (MongoDB, Express, React, Node.js). The platform includes most features that are present in a modern day ecommerce website.
 
 Hosted At: https://technology-ecommerce.netlify.app/
